@@ -1,0 +1,101 @@
+.navbar {
+    background: $primary-color;
+    transition: $transition;
+
+    & &-brand {
+
+        img {
+            width: 200px;
+
+            @include breakpoint-down(sm) {
+                width: 150px;
+            }
+        }
+
+        &-title {
+            font-family: $brand-font;
+            color: $primary-color;
+            font-size: 24px;
+        }
+
+        span {
+            color: $secondary-color;
+        }
+
+        p {
+            font-family: $primary-font;
+            font-size: 10px;
+            font-weight: 500;
+            color: $tertiary-color;
+            margin-top: -8px;
+            margin-bottom: 0;
+            text-align: right;
+        }
+    }
+
+    & &-nav {
+        & .nav-item {
+            &.active .nav-link::before {
+                transform: scale(1);
+
+                @include breakpoint-down(sm) {
+                    transform: scale(0);
+                }
+            }
+
+            & .nav-link {
+                color: #fff;
+                font-size: $font-sm;
+                font-weight: 500;
+                text-transform: capitalize;
+                padding: 5px 0;
+                position: relative;
+
+                @include breakpoint-down(sm) {
+                    color: #fff;
+                    font-size: $font-sm;
+                    font-weight: 300;
+                    padding: 10px 5px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: $tertiary-color;
+                    transition: $transition;
+                    transform: scale(0);
+                }
+
+                &:hover:before {
+                    transform: scale(1);
+                }
+            }
+
+            & .dropdown-menu {
+                background: $gradient-color;
+                font-size: $font-xs;
+
+                .dropdown-item {
+                    color: #fff;
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+    & &-toggler {
+        background: $secondary-color;
+        box-shadow: $shadow;
+        height: 34px;
+        width: 44px;
+        padding: 0;
+        color: #fff;
+    }
+}

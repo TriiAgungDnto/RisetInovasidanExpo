@@ -1,0 +1,38 @@
+// * All variables to be here
+
+// * Colors
+$primary-color: #123c75;
+$secondary-color: rgb(196, 51, 51);
+$tertiary-color: rgb(55, 123, 136);
+$dark-color: #4D4D4D;
+
+$gradient-color: linear-gradient(-225deg, $primary-color 0%, $secondary-color 67%, $secondary-color 100%);
+$gradient-secondary-color: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+
+$main-green: #79dd09 !default;
+$main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
+$main-yellow: #bdbb49 !default;
+$main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+$main-red: #bd150b !default;
+$main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+$main-blue: #0076bd !default;
+$main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+
+// * Font Type
+$brand-font: 'Viga',
+sans-serif;
+$primary-font: 'Roboto',
+sans-serif;
+
+//  * Font Sizes
+$font-xs: 0.75rem; // 12
+$font-sm: 0.875rem; // 14
+$font-md: 1.125rem; // 18
+$font-lg: 1.25rem; // 20
+
+
+// * Animation
+$transition: all 0.3s ease-in-out;
+
+// * etc
+$shadow: 0 10px 10px rgba(0, 0, 0, 0.1);

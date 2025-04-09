@@ -1,0 +1,14 @@
+@import './vendor/vendor';
+
+@import './variables';
+@import './mixins';
+@import './globals';
+@import './placeholder';
+
+
+@import './layouts/header';
+@import './layouts/footer';
+
+
+@import './pages/home';
+@import './pages/single';
