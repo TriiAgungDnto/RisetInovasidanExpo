@@ -58,14 +58,14 @@ class BookController extends Controller
             'year' => 'required|string',
             'isbn' => 'required|string',
             'url' => 'nullable|url',
-            'file' => 'required|mimes:pdf'
+            'file' => 'nullable|mimes:pdf'
         ]);
         
         DB::transaction(function () use ($request) {
             $file = $request->file('file');
-            $path = 'book/';
-            $filename = Str::slug($request->title) . '-' . time() . '.' . $file->extension();
-            $file->storeAs($path, $filename, 'file');
+            // $path = 'book/';
+            // $filename = Str::slug($request->title) . '-' . time() . '.' . $file->extension();
+            // $file->storeAs($path, $filename, 'file');
             
             Book::create([
                 'member_id' => $request->member,
@@ -77,7 +77,7 @@ class BookController extends Controller
                 'year' => $request->year,
                 'isbn' => $request->isbn,
                 'url' => $request->url,
-                'file' => $filename
+                'file' => $file
             ]);
         });
 
