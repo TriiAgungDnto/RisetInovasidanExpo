@@ -60,14 +60,14 @@ class ConferenceController extends Controller
             'isbn' => 'required|string',
             'type' => 'required|string',
             'url' => 'required|url',
-            'file' => 'required|mimes:pdf'
+            'file' => 'nullable|mimes:pdf'
         ]);
         
         DB::transaction(function () use ($request) {
             $file = $request->file('file');
-            $path = 'conference/';
-            $filename = Str::slug($request->title) . '-' . time() . '.' . $file->extension();
-            $file->storeAs($path, $filename, 'file');
+            // $path = 'conference/';
+            // $filename = Str::slug($request->title) . '-' . time() . '.' . $file->extension();
+            // $file->storeAs($path, $filename, 'file');
             
             Conference::create([
                 'member_id' => $request->member,
@@ -82,7 +82,7 @@ class ConferenceController extends Controller
                 'isbn' => $request->isbn,
                 'type' => $request->type,
                 'url' => $request->url,
-                'file' => $filename
+                'file' => $file
             ]);
         });
 

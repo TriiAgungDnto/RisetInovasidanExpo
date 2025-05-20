@@ -61,14 +61,14 @@ class JournalController extends Controller
             'e_issn' => 'required|string',
             'type' => 'required|string',
             'url' => 'nullable|url',
-            'file' => 'required|mimes:pdf'
+            'file' => 'nullable|mimes:pdf'
         ]);
         
         DB::transaction(function () use ($request) {
             $file = $request->file('file');
-            $path = 'journal/';
-            $filename = Str::slug($request->title) . '-' . time() . '.' . $file->extension();
-            $file->storeAs($path, $filename, 'file');
+            // $path = 'journal/';
+            // $filename = Str::slug($request->title) . '-' . time() . '.' . $file->extension();
+            // $file->storeAs($path, $filename, 'file');
             
             Journal::create([
                 'member_id' => $request->member,
@@ -83,7 +83,7 @@ class JournalController extends Controller
                 'e_issn' => $request->e_issn,
                 'type' => $request->type,
                 'url' => $request->url,
-                'file' => $filename
+                'file' => $file
             ]);
         });
 
