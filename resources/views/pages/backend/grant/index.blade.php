@@ -66,7 +66,11 @@
                                             <td>{{ $grant->schema }}</td>
                                             <td>{{ $grant->year }}</td>
                                             <td>{{ $grant->funding }}</td>
-                                            <td>{{ $grant->url }}</td>
+                                            <td>
+                                                <a href="{{ $grant->url }}" target="_blank">
+                                                    <i class="fas fa-file-alt" style="font-size: 25px;"></i>
+                                                </a>
+                                            </td>
                                             <td>
                                                 <a href="{{ route('grant.edit', $grant) }}"><button
                                                         class="btn btn-info btn-xs"><i class="fa fa-edit"></i></button></a>

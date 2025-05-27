@@ -48,6 +48,7 @@ class GrantController extends Controller
             'schema' => 'required',
             'year' => 'required',
             'funding' => 'required',
+            'url' => 'required',
         ]);
 
         Grant::create([
@@ -56,7 +57,8 @@ class GrantController extends Controller
             'title' => $request->title,
             'schema' => $request->schema,
             'year' => $request->year,
-            'funding' => $request->funding
+            'funding' => $request->funding,
+            'funding' => $request->url,
         ]);
 
         return redirect()->route('grant.index')->withToastSuccess('Hibah berhasil dibuat');
@@ -102,15 +104,17 @@ class GrantController extends Controller
             'schema' => 'required',
             'year' => 'required',
             'funding' => 'required',
+            'url' => 'required',
         ]);
-        
+
         $grant->update([
             'member_id' => $request->member,
             'team' => implode($request->teams),
             'title' => $request->title,
             'schema' => $request->schema,
             'year' => $request->year,
-            'funding' => $request->funding
+            'funding' => $request->funding,
+            'funding' => $request->url,
         ]);
 
         return redirect()->route('grant.index')->withToastSuccess('Hibah berhasil diubah');

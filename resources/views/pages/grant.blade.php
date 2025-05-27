@@ -39,7 +39,14 @@
                                     <td>{{ $grant->schema }}</td>
                                     <td>{{ $grant->year }}</td>
                                     <td>{{ $grant->funding }}</td>
-                                    <td>{{ $grant->url }}</td>
+                                    <td class="text-center align-middle h-[50px]">
+                                        @if (!is_null($grant->url))
+                                            <a href="{{ $grant->url }}" target="_blank"><i class="fas fa-file-alt"
+                                                    style="font-size: 28px;"></i></a>
+                                        @else
+                                            -
+                                        @endif
+                                    </td>
                                 </tr>
                             @empty
                                 <tr>
