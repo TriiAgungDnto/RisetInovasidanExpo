@@ -69,7 +69,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="url">Sumber Pendanaan <small>*</small></label>
+                                    <label for="url">URL <small>*</small></label>
                                     <input type="text" class="form-control form-control-sm" id="url" name="url"
                                         value="{{ old('url') }}">
                                 </div>

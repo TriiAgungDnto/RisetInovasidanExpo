@@ -58,7 +58,7 @@ class GrantController extends Controller
             'schema' => $request->schema,
             'year' => $request->year,
             'funding' => $request->funding,
-            'funding' => $request->url,
+            'url' => $request->url,
         ]);
 
         return redirect()->route('grant.index')->withToastSuccess('Hibah berhasil dibuat');
@@ -114,7 +114,7 @@ class GrantController extends Controller
             'schema' => $request->schema,
             'year' => $request->year,
             'funding' => $request->funding,
-            'funding' => $request->url,
+            'url' => $request->url,
         ]);
 
         return redirect()->route('grant.index')->withToastSuccess('Hibah berhasil diubah');
