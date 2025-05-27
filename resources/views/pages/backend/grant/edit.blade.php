@@ -69,7 +69,7 @@
                                         value="{{ old('funding') ?? $grant->funding }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="url">Sumber Pendanaan <small>*</small></label>
+                                    <label for="url">Url Link <small>*</small></label>
                                     <input type="text" class="form-control form-control-sm" id="url" name="url"
                                         value="{{ old('url') ?? $grant->url }}">
                                 </div>
