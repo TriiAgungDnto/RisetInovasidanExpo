@@ -12,7 +12,7 @@
                 <li class="nav-item dropdown mr-md-4">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Data Riset &amp; Inovasi
+                        Data Riset, Inovasi &amp; Pengabdian
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('book') }}">Buku</a>
